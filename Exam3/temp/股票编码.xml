@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <content> 
-  <stock id="4"> 
-    <name>var hq_str_sh601006="������·</name>  
-    <open>8.760</open>  
-    <close>8.730</close>  
-    <current>8.800</current>  
-    <high>8.840</high>  
-    <low>8.700</low> 
-  </stock>  
-  <stock id="4"> 
-    <name>var hq_str_sh601006="������·</name>  
-    <open>8.760</open>  
-    <close>8.730</close>  
-    <current>8.800</current>  
-    <high>8.840</high>  
-    <low>8.700</low> 
-  </stock>  
   <stock id="4">
     <name>var hq_str_sh601006="������·</name>
     <open>8.760</open>

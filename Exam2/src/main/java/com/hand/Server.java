@@ -17,29 +17,24 @@ public class Server {
         FileInputStream fs = new FileInputStream(new File("Exam1/temp/SampleChapter1.pdf"));
         int len = 0;
         byte[] buf = new byte[2048];
-        while((len=fs.read(buf))!=-1){
-            String str = new String(buf,0,len);
+        while ((len = fs.read(buf)) != -1) {
+            String str = new String(buf, 0, len);
             System.out.println(str);
             data = data + str;
         }
-        System.out.println("data:"+data);
+        System.out.println("data:" + data);
         fs.close();
 
-        ServerSocket server = new ServerSocket(8766);
+        ServerSocket server = new ServerSocket(8889);
         System.out.println("服务器已经准备就绪");
-        //接收该服务器端的客户端对象
-        boolean accept = true;
-        while (accept){
-            Socket client  = server.accept();
-            System.out.println("当前链接过来的客户端是:"+client.getInetAddress());
-            //获取客户端传出的输出流，给客户端输出数据
-            PrintStream out = new PrintStream(client.getOutputStream());
-
-
-
-            out.println(data);
-            out.close();
-        }
+        //接收该服务器端的客户端对
+        Socket client = server.accept();
+        System.out.println("当前链接过来的客户端是:" + client.getInetAddress());
+        //获取客户端传出的输出流，给客户端输出数据
+        PrintStream out = new PrintStream(client.getOutputStream());
+        out.println(data);
+        out.close();
         server.close();
+        System.out.println("sss");
     }
 }

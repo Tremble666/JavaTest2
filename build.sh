@@ -1,33 +1,21 @@
-cd Exam1
-
 mvn clean package
 
-cd target
+java -jar Exam1/target/getpdf.jar
 
-java -jar getpdf.jar
+java -jar Exam3/target/getjson.jar
+
+java -jar Exam2/target/server.jar com.hand.Server &
+
+java -jar Exam2/target/server.jar com.hand.Client
 
 
-cd ../..
 
-cd Exam2
 
-mvn package
 
-cd target
 
- java -cp server.jar com.hand.Server
 
- java -cp server.jar com.hand.Client
 
-cd ../..
 
-cd Exam3
-
-mvn clean package
-
-cd target
-
-java -jar getpdf.jar
 
 
 
